@@ -44,56 +44,143 @@
             border: 1px solid #ddd;
             border-radius: 5px;
         }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            margin-bottom: 5px;
+        }
+
+        .input-group .radio-group, input.group .checkbox-group{
+            display: flex;
+            gap: 20px;
+            
+        }
+
+        div {
+            border: 1px solid rgb(122, 148, 163);
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+            border: none;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        button:hover{
+            background-color: #4caf50;
+        }
+
+        input, select, textarea, button {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
     <div id="form-container">
         <h2>Formulário de cadastro</h2>
         <form>
-            <div>
+            <div class="input-group">
                 <label>Nome Completo:</label>
                 <input type="text">
             </div>
             
-            <div>
+            <div class="input-group">
                 <label>E-mail:</label>
                 <input type="email">
             </div>
 
-            <div>
+            <div class="input-group">
                 <label>Senha:</label>
                 <input type="password" placeholder="Digite sua senha">
             </div>
 
-            <div>
-                <label>Telefone</label>
+            <div class="input-group">
+                <label>Telefone:</label>
                 <input type="tel">
             </div>
 
-            <div>
-                <label>Website</label>
+            <div class="input-group">
+                <label>Website:</label>
                 <input type="url">
             </div>
 
-            <div>
-                <label>Data de nascimento</label>
+            <div class="input-group">
+                <label>Data de nascimento:</label>
                 <input type="date">
             </div>
 
-            <div>
-                <label>Hora</label>
+            <div class="input-group">
+                <label>Hora:</label>
                 <input type="time">
             </div>
 
-            <div>
-                <label>Pesquisa</label>
+            <div class="input-group">
+                <label>Pesquisa:</label>
                 <input type="search">
             </div>
 
-            <div>
-                <label>Quantidade</label>
+            <div class="input-group">
+                <label>Quantidade:</label>
                 <input type="number">
             </div>
+
+            <div class="input-group">
+                <label>Genêro:</label>
+                <div class="radio-group">
+                    <label for="male">
+                        <input type="radio" value="male" name="gender">Masculino
+                    </label>
+                    <label for="female">
+                        <input type="radio" value="female" name="gender">Feminino
+                    </label>
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label>Preferências:</label>
+                <div class="checkbox-group">
+                    <label for="newsletter">
+                        <input type="checkbox" name="newsletter">gostaria de assinar a newsletter
+                    </label>
+                       <label for="updates">
+                        <input type="checkbox" name="updates">gostaria de receber atualizções
+                    </label>
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="resume">Carregar currículo</label>
+                <input type="file" name="resume">
+            </div>
+
+            <div class="input-group">
+                <label for="city">Cidade:</label>
+                <select name="city">
+                    <option value="rs">Canoas</option>
+                    <option value="sp">Osasco</option>
+                    <option value="rj">Rio de janeiro</option>
+                    <option value="rs">Gramado</option>
+                    <option value="pr">Maringá</option>
+                    <option value="df">Brazlandia</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="message">Mensagem</label>
+                <textarea name="message" placeholder="Deixe uma mensagem"></textarea>
+            </div>
+            
+            <button type="submit">Enviar</button>
         </form>
     </div>
 </body>
